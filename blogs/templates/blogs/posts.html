@@ -11,10 +11,13 @@
     {% for post in posts %}
       <li><h5>
         <b>{{ post.owner }}:</b>
+        <h3>{{ post.title }}</h3>
         {{ post }}
+        {% if post.owner == request.user %}
         <p>
           <a href="{% url 'blogs:edit_post' post.id %}">Edit Post</a>
         </p>
+        {% endif %}
       </h5></li>
     {% empty %}
       <li><h3>No posts have been added yet.</h3></li>
