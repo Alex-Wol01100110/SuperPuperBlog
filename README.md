@@ -1,0 +1,3 @@
+# SuperPuperBlog
+
+Simple blog :)
